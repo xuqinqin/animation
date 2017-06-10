@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>案列</title>
+<title>jquery运动</title>
 <style>
 body,div,span{
 	margin:0;
@@ -53,7 +53,7 @@ body,div,span{
 <script src="js/jquery-3.2.1.js"></script>
 <script type="text/javascript">
 	$(function(){
-		$("#move a").onmouseover(function(){
+		$("#move a").mouseenter(function(){
 			$(this).find("i").animate({top:"-8px",opacity:"0"},300,function(){
 				$(this).css({top:"12px"});
 				$(this).animate({top:"8px",opacity:100},200)
