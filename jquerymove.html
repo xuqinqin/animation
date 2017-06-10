@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery运动</title>
+<style>
+body,div,span{
+	margin:0;
+	padding:0;
+	}
+#move{
+	width: 170px;
+	height: 150px;
+	margin: 250px;
+	border:1px solid #ddd;
+	position: absolute;
+}
+
+#move a{
+	display:inline-block;
+	width:40px;
+	height:55px;
+	border:1px solid #ddd;
+	border-radius: 3px;
+	background-color: #ccf;
+	text-align: center;
+	
+	text-decoration: none;//去除链接属性的下划线
+	position: relative;
+	margin-top:12px;
+	margin-left: 7px;
+	
+}
+#move a i{
+	position:relative;
+	color: #f66;
+	top:8px;
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+#move a p{
+	position:relative;
+	color: #000;
+	font-size: 10px;
+	top:9px;
+}
+#move a p:hover{
+	color:#fff;
+}
+</style>
+<link rel="stylesheet" href="Font-Awesome-3.2.1/css/font-awesome.css">
+<link rel="stylesheet" href="Font-Awesome-3.2.1/css/font-awesome.min.css">
+<script src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#move a").mouseenter(function(){
+			$(this).find("i").animate({top:"-8px",opacity:"0"},300,function(){
+				$(this).css({top:"12px"});
+				$(this).animate({top:"8px",opacity:100},200)
+			})
+		})
+	})
+	
+</script>
+</head>
+
+<body>
+	<div id=move>
+	<a href="#"><i class="icon-music"></i><p>音乐</p></a>
+	<a><i class="icon-bell"></i><p>铃铛</p></a>
+	<a><i class="icon-star-empty"></i><p>星星</p></a>
+	<a><i class="icon-heart-empty"></i><p>爱心</p></a>
+	<a><i class="icon-bullhorn"></i><p>喇叭</p></a>
+	<a><i class="icon-gift"></i><p>礼物</p></a>
+	</div>
+	
+</body>
+</html>
